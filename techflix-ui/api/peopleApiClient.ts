@@ -7,6 +7,7 @@ export interface PersonModel {
     imageUrl: string;
     id: number;
     dateOfBirth: string;
+    dateOfDeath: string;
     placeOfBirth: string;
     knownFor: string;
     biography: string;

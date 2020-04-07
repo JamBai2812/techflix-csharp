@@ -7,7 +7,7 @@ namespace TechFlixApi.Models.Metadata
         public string BackdropPath { get; set; }
         public long Budget { get; set; }
         public string HomePage { get; set; }
-        public string Synopsis { get; set; }
+        public string Overview { get; set; }
         public double Popularity { get; set; }
         public string PosterPath { get; set; }
         public string ReleaseDate { get; set; }

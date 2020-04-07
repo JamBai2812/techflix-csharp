@@ -28,7 +28,7 @@ namespace TechFlixApi.Models.Response
                 PosterImageUrl = $"https://image.tmdb.org/t/p/original/{metadataFilm.PosterPath}",
                 Budget = metadataFilm.Budget,
                 HomePage = metadataFilm.HomePage,
-                Synopsis = metadataFilm.Synopsis,
+                Synopsis = metadataFilm.Overview,
                 ReleaseDate = metadataFilm.ReleaseDate,
                 Revenue = metadataFilm.Revenue,
                 Runtime = metadataFilm.Runtime,

@@ -6,6 +6,7 @@ namespace TechFlixApi.Models.Metadata
     public class PersonMetadata
     {
         public string Birthday { get; set; }
+        public string Deathday { get; set; }
         public string KnownForDepartment { get; set; }
         public string Name { get; set; }
         public string Biography { get; set; }
