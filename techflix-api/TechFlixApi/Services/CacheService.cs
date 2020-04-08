@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using TechFlixApi.Models.Response;
 
 namespace TechFlixApi.Models.CacheService
 {
     public interface ICacheService
     {
-        ActionResult GetOrCreate(string key, Func<ActionResult> createAction);
+        Dictionary<string, ResultList<Film>> CacheDictionary { get; set; }
+        ResultList<Film> GetOrCreate(string key, Func<ResultList<Film>> createAction);
     }
 
     public class CacheService : ICacheService
     {
-        public Dictionary<string, ActionResult> CacheDictionary { get; set; }
+        public Dictionary<string, ResultList<Film>> CacheDictionary { get; set; }
 
         public CacheService()
         {
-            CacheDictionary = new Dictionary<string, ActionResult>();
+            CacheDictionary = new Dictionary<string, ResultList<Film>>();
         }
 
-        public ActionResult GetOrCreate(string key, Func<ActionResult> createAction)
+        public ResultList<Film> GetOrCreate(string key, Func<ResultList<Film>> createAction)
         {
             if (!CacheDictionary.ContainsKey(key))
             {

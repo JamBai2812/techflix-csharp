@@ -12,6 +12,7 @@ namespace TechFlixApi.Controllers
         private readonly IFilmsService _filmsService;
         private readonly IPeopleService _peopleService;
         private readonly ICacheService _cacheService;
+        private readonly string _apiUrl = "http://localhost:8000/films";
 
         public FilmsController(IFilmsService filmsService, IPeopleService peopleService, ICacheService cacheService)
         {
@@ -23,7 +24,9 @@ namespace TechFlixApi.Controllers
         [HttpGet("")]
         public ActionResult<ResultList<Film>> GetFilms()
         {
-            return _filmsService.GetFilms();
+            var page = _apiUrl+""; 
+            
+                return _cacheService.GetOrCreate(page, () => _filmsService.GetFilms());
         }
 
         [HttpGet("popular")]
