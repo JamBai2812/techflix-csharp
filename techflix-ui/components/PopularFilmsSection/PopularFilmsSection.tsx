@@ -13,7 +13,7 @@ export const PopularFilms: FunctionComponent<PopularFilmsProps> = ({showLinkToAl
     return (
         <Section title="Top Films">
             <CardList dataArray={films}/>
-            {showLinkToAllFilms && <SecondaryButtonLink href="/films">More Films</SecondaryButtonLink>}
+            {showLinkToAllFilms && <SecondaryButtonLink testId="moreFilms" href="/films">More Films</SecondaryButtonLink>}
         </Section>
     );
 };

@@ -8,5 +8,14 @@ namespace SeleniumTests
         {
             return driver.FindElement(By.XPath($"//*[@data-test-id='{testId}']"));
         }
+
+        // public static IWebElement FindElementByTitle(this IWebDriver driver, string title)
+        // {
+        //     pageTitle
+        //     
+        //     if()
+        //     
+        //     return driver.FindElementByTestId("page-title");
+        // }
     }
 }

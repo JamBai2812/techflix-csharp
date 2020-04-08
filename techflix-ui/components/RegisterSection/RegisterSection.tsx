@@ -8,7 +8,7 @@ export const RegisterSection: FunctionComponent = () => {
         <BannerSection title={"Register"}>
             <p className={styles.message}>It looks like you don't yet have an account!</p>
             <p className={styles.message}>Sign up now to gain access to all the films you love!</p>
-            <PrimaryButtonLink href="/todo">Register</PrimaryButtonLink>
+            <PrimaryButtonLink testId="registerButton" href="/todo">Register</PrimaryButtonLink>
         </BannerSection>  
     );
 };
