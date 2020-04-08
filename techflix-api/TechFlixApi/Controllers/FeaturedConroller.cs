@@ -9,6 +9,7 @@ namespace TechFlixApi.Controllers
     public class FeaturedConroller : ControllerBase
     {
         private readonly IFeaturesService _featuresService;
+        
 
         public FeaturedConroller(IFeaturesService featuresService)
         {

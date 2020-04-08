@@ -47,6 +47,7 @@ namespace TechFlixApi.Controllers
             return _peopleService.GetPeople();
         }
         
+        
         [HttpGet("{id}/similar")]
         public ActionResult<ResultList<Film>> GetSimilar([FromRoute] int id)
         {
