@@ -36,7 +36,7 @@ namespace TechFlixApi
             services.AddTransient<IMetadataService, MetadataService>();
             services.AddTransient<IReviewsService, ReviewsService>();
             services.AddTransient<IFeaturesService, FeaturesService>();
-            services.AddTransient<ICacheService, CacheService>();
+            services.AddSingleton<ICacheService, CacheService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
