@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechFlixApi.Models.CacheService;
 using TechFlixApi.Models.Response;
 using TechFlixApi.Services;
 
@@ -10,11 +11,13 @@ namespace TechFlixApi.Controllers
     {
         private readonly IFilmsService _filmsService;
         private readonly IPeopleService _peopleService;
+        private readonly ICacheService _cacheService;
 
-        public FilmsController(IFilmsService filmsService, IPeopleService peopleService)
+        public FilmsController(IFilmsService filmsService, IPeopleService peopleService, ICacheService cacheService)
         {
             _filmsService = filmsService;
             _peopleService = peopleService;
+            _cacheService = cacheService;
         }
 
         [HttpGet("")]

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechFlixApi.Models.CacheService;
 using TechFlixApi.Models.Response;
 using TechFlixApi.Services;
 
@@ -9,11 +10,13 @@ namespace TechFlixApi.Controllers
     public class FeaturedConroller : ControllerBase
     {
         private readonly IFeaturesService _featuresService;
+        private readonly ICacheService _cacheService;
         
 
-        public FeaturedConroller(IFeaturesService featuresService)
+        public FeaturedConroller(IFeaturesService featuresService, ICacheService cacheService)
         {
             _featuresService = featuresService;
+            _cacheService = cacheService;
         }
 
         [HttpGet("")]
